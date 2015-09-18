@@ -2375,6 +2375,7 @@ aa.add( 'checkmate', 1,
 
 		var keyName = keyMap[c];
 		if(keyName){
+			e.preventDefault();
 			//only take events that represent an actual change
 			if(keyBoolMap[keyName] !== isDown){
 				keyBoolMap[keyName] = isDown;
@@ -2432,7 +2433,8 @@ aa.add( 'checkmate', 1,
 	*/
 
 	init();
-};;(function() {
+};
+;(function() {
     var lastTime = 0;
     var vendors = ['webkit', 'moz'];
     for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
