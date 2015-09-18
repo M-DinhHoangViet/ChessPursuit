@@ -2291,6 +2291,7 @@ window.onload = function(){
 
 		var keyName = keyMap[c];
 		if(keyName){
+			e.preventDefault();
 			//only take events that represent an actual change
 			if(keyBoolMap[keyName] !== isDown){
 				keyBoolMap[keyName] = isDown;
