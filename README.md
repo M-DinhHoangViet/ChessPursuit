@@ -1,4 +1,4 @@
-# Chess Pursuit
+# Chess Pursuit (Đã được dịch sang tiếng Việt)
 
 This is the game I created for the JS13K contest of 2015, the theme was "Reversed".
 
