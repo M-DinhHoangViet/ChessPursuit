@@ -1119,7 +1119,7 @@ window.onload = function(){
 			//Waiting for space
 		}else if(introStep == 1){
 			if(init){
-				showDialog(true,['Surrender Black King !', 'Your army is defeated, and your Queen is mine !']);
+				showDialog(true,['Đầu hàng đi vua đen !', 'Quân đội của ngươi đã bị đánh bại', 'và Hậu của ngươi là của ta !']);
 				whiteKing.talking = true;
 			}
 		}else if(introStep == 2){
@@ -1133,18 +1133,18 @@ window.onload = function(){
 			}
         }else if(introStep == 3){
             if(init){
-                showDialog(true,['You thought I\'d only bring two knights to battle ?','You are surrounded,','admit defeat now and I shall be merciful.']);
+                showDialog(true,['Ngươi nghĩ ta chỉ mang theo hai mã ra trận sao?','Ngươi đã bị bao vây,','hãy nhận thất bại bây giờ thì ta còn thương xót cho.']);
                 whiteKing.talking = true;
             }
         }else if(introStep == 4){
             if(init){
-                showDialog(false,['Never !']);
+                showDialog(false,['Không Bao Giờ !']);
                 blackKing.talking = true;
             }
             //sword ?
         }else if(introStep == 5){
             if(init){
-                showDialog(true, ['As you wish...','I am taking the prisoner back to the castle.','Knights, capture him, I want him alive.']);
+                showDialog(true, ['Như ngươi ước....','Ta đang đưa tù nhân trở lại lâu đài.','Các mã, bắt hắn đi, ta muốn bắt sống hắn.']);
                 whiteKing.talking = true;
             }
         }else if(introStep == 6){
@@ -1166,7 +1166,7 @@ window.onload = function(){
         }else if(introStep == 7){
             if(init){
                 var anim = '<animate attributeType="CSS" attributeName="fill" from="red" to="orange" dur="0.5s" repeatCount="indefinite"/>';
-                showDialog(false, ['It looks like our roles are <tspan fill="red" font-family="impact">REVERSED'+anim+'</tspan> my Queen.',"Today, it is my turn to protect you !"]);
+                showDialog(false, ['Có vẻ như vai trò của mình là <tspan fill="red" font-family="impact">REVERSED'+anim+'</tspan>','cho Hậu của mình.',"Hôm nay hãy để tôi bảo vệ em !"]);
                 blackKing.talking = true;
 
                 //remove intro pieces
@@ -2062,8 +2062,8 @@ window.onload = function(){
                 'font-family':'Impact'
             });
             svgInnerHtml(text,
-                '<tspan x="50%">Press <tspan style="fill:orange;">SPACE</tspan> or <tspan style="fill:orange;">CLICK</tspan></tspan>' +
-                '<tspan x="50%" dy="1.5em">to restart from the last checkpoint.</tspan>'
+                '<tspan x="50%">Nhấn <tspan style="fill:orange;">Phím cách</tspan> hoặc <tspan style="fill:orange;">Đúp chuột</tspan></tspan>' +
+                '<tspan x="50%" dy="1.5em">để chợi lại từ điểm vạch màu xanh đã qua cuối cùng.</tspan>'
             );
             gameOverScreen.appendChild(text);
 		}
@@ -2103,7 +2103,7 @@ window.onload = function(){
                 'text-anchor': 'middle',
                 'font-family':'Impact'
             });
-            svgInnerHtml(pressSpaceText, 'Press <tspan style="fill:orange;">SPACE</tspan> or <tspan style="fill:orange;">CLICK</tspan>');
+            svgInnerHtml(pressSpaceText, 'Nhấn <tspan style="fill:orange;">Phím cách</tspan> hoặc <tspan style="fill:orange;">Đúp chuột</tspan>');
             svgElem.appendChild(pressSpaceText);
         }
 
@@ -2182,7 +2182,7 @@ window.onload = function(){
                 'text-anchor': 'middle',
                 'font-family':'Impact'
             });
-            svgInnerHtml(text, 'YOU WIN !');
+            svgInnerHtml(text, 'BẠN THẮNG !');
             winScreen.appendChild(text);
 
             text = document.createElementNS (xmlns, 'text');
@@ -2196,7 +2196,7 @@ window.onload = function(){
                 'text-anchor': 'middle',
                 'font-family':'Impact'
             });
-            svgInnerHtml(text, 'Alas, your Queen is in another castle...');
+            svgInnerHtml(text, 'Than ôi, Hậu của bạn đang ở trong một lâu đài khác...');
             winScreen.appendChild(text);
         }
 	}
@@ -2205,9 +2205,9 @@ window.onload = function(){
 	var dialogCloseY;
 	function showDialog(whiteKing,texts){
 		if(whiteKing){
-			 svgInnerHtml(dialogSpeakerText, 'White King :');
+			 svgInnerHtml(dialogSpeakerText, 'Vua Trắng :');
 		}else{
-			 svgInnerHtml(dialogSpeakerText, 'Black King :');
+			 svgInnerHtml(dialogSpeakerText, 'Vua Đen :');
 		}
 		var txt = '';
 		for(var i=0; i<texts.length; i++){
